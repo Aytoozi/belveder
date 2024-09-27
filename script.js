@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (window.scrollY > 50) {
 			navBar.style.visibility = "visible";
 			logo.style.width = "15vw";
-			navSection.style.backgroundColor = "rgb(73, 73, 73)";
+			navSection.style.backgroundColor = "rgb(92, 64, 51)";
 		} else {
 			navBar.style.visibility = "hidden";
 			logo.style.width = "20vw";

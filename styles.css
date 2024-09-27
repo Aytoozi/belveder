@@ -6,11 +6,11 @@ html,
 	box-sizing: border-box;
 	scrollbar-width: thin;
 	scroll-behavior: smooth;
-	scrollbar-color: rgb(234, 178, 228) rgb(73, 73, 73);
+	scrollbar-color: rgb(234, 178, 228) rgb(92, 64, 51);
 }
 
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(to bottom, rgb(234, 178, 228), #7c7c7c);
+	background: linear-gradient(to bottom, rgb(234, 178, 228), rgb(193, 154, 107));
 	border-radius: 10px;
 	border: 3px solid transparent;
 	transition: box-shadow 0.3s;
@@ -19,14 +19,14 @@ html,
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(to bottom, #7c7c7c, rgb(234, 178, 228));
+	background: linear-gradient(to bottom, rgb(193, 154, 107), rgb(234, 178, 228));
 	/* Change color on hover */
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	/* Add box-shadow when hovering */
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background-color: #7c7c7c;
+	background-color: rgb(193, 154, 107);
 	/* Darker color when pressed */
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 	/* Stronger shadow when pressed */
@@ -39,13 +39,12 @@ html,
 
 /* Scrollbar track */
 ::-webkit-scrollbar-track {
-	background: rgb(73, 73, 73);
+	background: rgb(92, 64, 51);
 	border-radius: 10px;
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 	margin: 0;
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
@@ -58,7 +57,7 @@ body button {
 	padding: 10px 20px;
 	margin: 5px;
 	border: none;
-	background-color: rgb(73, 73, 73);
+	background-color: rgb(92, 64, 51);
 	color: #fff;
 	cursor: pointer;
 	border-radius: 5px;
@@ -66,7 +65,7 @@ body button {
 }
 
 button:hover {
-	background-color: #7c7c7c;
+	background-color: rgb(193, 154, 107);
 }
 
 h1,
@@ -182,6 +181,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding:1rem;
 }
 
 #belvederLogo {
@@ -233,8 +233,8 @@ nav ul li a {
 }
 
 .hero>h1 {
-	color: rgb(73, 73, 73);
-	background: radial-gradient(rgb(234, 178, 228), rgba(234, 178, 228, 0.7), rgba(73, 73, 73, 0.5));
+	color: rgb(92, 64, 51);
+	background: radial-gradient(rgb(234, 178, 228), rgba(234, 178, 228, 0.7),rgb(92, 64, 51));
 	border-radius: 15%/80%;
 	padding: 1rem;
 }
@@ -265,7 +265,7 @@ nav ul li a {
 
 #saying>img {
 	height: 30vh;
-	border: 5px solid #7c7c7c;
+	border: 5px solid rgb(193, 154, 107);
 	padding: 10px;
 	background-color: #fff;
 	box-shadow:
@@ -318,7 +318,7 @@ nav ul li a {
 
 #events-section>h1 {
 	margin-bottom: 30px;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 }
 
 .tabs {
@@ -334,7 +334,7 @@ nav ul li a {
 
 .event-content h2 {
 	margin-bottom: 20px;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 }
 
 .event-content p {
@@ -381,8 +381,8 @@ nav ul li a {
 	height: 93%;
 	margin: 4rem;
 	border-radius: 20%/30%;
-	background-color: rgb(73, 73, 73);
-	border: 2px solid rgb(73, 73, 73);
+	background-color: rgb(92, 64, 51);
+	border: 2px solid rgb(92, 64, 51);
 }
 
 #location>p {
@@ -390,13 +390,13 @@ nav ul li a {
 	width: 50%;
 	height: 100%;
 	line-height: 2rem;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 #map {
 	height: 100%;
 	width: 50%;
-	box-shadow: 3px 3px 10px 1px rgb(73, 73, 73);
+	box-shadow: 3px 3px 10px 1px rgb(92, 64, 51);
 }
 
 /* General styling for the reviews section */
@@ -410,7 +410,7 @@ nav ul li a {
 #reviews-section h1 {
 	font-size: 2.5em;
 	margin-bottom: 20px;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 }
 
 /* Reviews slider styling */
@@ -438,7 +438,7 @@ nav ul li a {
 
 .review h3 {
 	margin-top: 10px;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 }
 
 
@@ -452,7 +452,7 @@ nav ul li a {
 
 #leave-review h2 {
 	margin-bottom: 20px;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 }
 
 #review-form {
@@ -480,7 +480,7 @@ nav ul li a {
 
 #social-media-section h1 {
 	margin-bottom: 20px;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 }
 
 /* Social icons styling */
@@ -511,11 +511,6 @@ nav ul li a {
 	padding: 20px;
 }
 
-
-.galleryImg{
-	height:30vh;
-}
-
 /* menu */
 #menuBody {
 	background: linear-gradient(180deg,
@@ -529,45 +524,76 @@ nav ul li a {
 	background-size: 100vh 100vh;
 }
 
-#galleryBody{
-	
-}
-main{
-position: relative;
-}
-.gallery-section{
-	position:relative;
-	display:flex;
-	flex-direction: column;
-	top:200px;
+#menuMain {
+	height: auto;
+	margin-top: 10rem;
+	width: 90%;
 }
 
-.gallery-grid{
-	display:flex;
+.gallery-section {
+	height: auto;
+	margin-top: 10rem;
+}
+
+.gallery-grid {
+	display: flex;
 	flex-direction: row;
-	width:90vw;
+	width: 90vw;
+	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
-	position: relative;
-}
-.galleryImg{
-	height:25vh;
-	margin:0.4rem;
+	margin-top: 2rem;
 }
 
+.galleryImg {
+	height: 25vh;
+	width: 15%;
+	min-width: 200px;
+	margin: 0.4rem;
+}
 
+#contactMain {
+	margin: auto;
+	padding: 0;
+	width: 90%;
+	height:94vh;
+}
+
+.contact-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
 
 .contact-section form {
 	display: flex;
 	flex-direction: column;
-	max-width: 400px;
+	width: 70vw;
 	margin: auto;
+	margin: 3rem 0;
 }
 
 .contact-section input,
 .contact-section textarea {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1rem;
 	margin: 5px 0;
 	padding: 10px;
-	border: 1px solid rgb(73, 73, 73);
+	border: 1px solid rgb(92, 64, 51);
+}
+
+.contact-section>button {
+	margin: 0;
+	padding: 0;
+	width: 70vw;
+}
+
+.contact-info {
+	width: 70vw;
+	line-height: 2rem;
 }
 
 /* About Section Styling */
@@ -580,7 +606,7 @@ position: relative;
 
 #about-section h1 {
 	margin-bottom: 20px;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 }
 
 .about-content {
@@ -591,7 +617,7 @@ position: relative;
 
 .about-content h2 {
 	margin: 20px 0 10px;
-	color: rgb(73, 73, 73);
+	color: rgb(92, 64, 51);
 }
 
 .about-content p {
@@ -599,11 +625,9 @@ position: relative;
 	line-height: 1.6;
 }
 
-
-
 footer {
 	text-align: center;
 	padding: 20px;
-	background-color: rgb(73, 73, 73);
+	background-color: rgb(92, 64, 51);
 	color: white;
 }
