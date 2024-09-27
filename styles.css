@@ -10,7 +10,7 @@ html,
 }
 
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(to bottom, rgb(234, 178, 228), rgb(193, 154, 107));
+	background: linear-gradient(to bottom, rgb(234, 178, 228), rgb(135, 206, 235));
 	border-radius: 10px;
 	border: 3px solid transparent;
 	transition: box-shadow 0.3s;
@@ -19,14 +19,14 @@ html,
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(to bottom, rgb(193, 154, 107), rgb(234, 178, 228));
+	background: linear-gradient(to bottom, rgb(135, 206, 235), rgb(234, 178, 228));
 	/* Change color on hover */
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	/* Add box-shadow when hovering */
 }
 
 ::-webkit-scrollbar-thumb:active {
-	background-color: rgb(193, 154, 107);
+	background-color: rgb(135, 206, 235);
 	/* Darker color when pressed */
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 	/* Stronger shadow when pressed */
@@ -53,7 +53,6 @@ body {
 }
 
 body button {
-	font-size: 1.3rem;
 	padding: 10px 20px;
 	margin: 5px;
 	border: none;
@@ -65,7 +64,7 @@ body button {
 }
 
 button:hover {
-	background-color: rgb(193, 154, 107);
+	background-color: rgb(135, 206, 235);
 }
 
 h1,
@@ -265,7 +264,7 @@ nav ul li a {
 
 #saying>img {
 	height: 30vh;
-	border: 5px solid rgb(193, 154, 107);
+	border: 5px solid rgb(135, 206, 235);
 	padding: 10px;
 	background-color: #fff;
 	box-shadow:
