@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Caffe Bar Belvedere - Home</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Waterfall&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Waterfall&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet/dist/leaflet.css"
+		/>
+	</head>
+	<body>
+		<header id="header">
+			<section id="navSection">
+				<div class="logo" id="logo">
+					<img
+						id="belvederLogo"
+						src="/images/logos/logoBelvedereNB.png"
+						alt=""
+					/>
+				</div>
+				<nav id="navBar">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</section>
+		</header>
+		<main>
+			<div class="slideshow">
+				<img src="/images/gallery/coffe/coffeArt.jpg" alt="Image 1" />
+				<img src="/images/gallery/coffe/coffeOwl.jpg" alt="Image 2" />
+				<img src="/images/gallery/belvederBuilding.jpg" alt="Image 3" />
+				<img src="/images/gallery/splitPanorama.jpg" alt="Image 4" />
+				<img
+					src="/images/gallery/ambient/409040759_408533478364236_3558805906339561602_n.jpg"
+					alt="Image 5"
+				/>
+			</div>
+			<section class="hero">
+				<h1>Welcome to Caffe Bar Belvedere</h1>
+				<button onclick="location.href='menu.html'">
+					Explore Our Menu
+				</button>
+			</section>
+		</main>
+		<section class="highlights">
+			<h2>Our Highlights</h2>
+			<div class="highlight-item">
+				<h3>Signature Coffee</h3>
+				<p>Experience our rich and aromatic coffee blends.</p>
+			</div>
+			<div class="highlight-item">
+				<h3>Delicious Pastries</h3>
+				<p>Indulge in our freshly baked pastries daily.</p>
+			</div>
+		</section>
+
+		<div id="saying">
+			<div>
+				<p>"I have measured out my life with coffee spoons."</p>
+				<p id="drugi">The Love Song of J. Alfred Prufrock; T.S.Eliot</p>
+			</div>
+			<img src="/images/gallery/coffe/coffeLover.jpg" alt="coffeImg" />
+		</div>
+
+		<section id="events-section">
+			<h1>What's Happening at Caffe Bar</h1>
+
+			<!-- Tab buttons for switching between events -->
+			<div class="tabs">
+				<button class="tab-button" onclick="showEvent('parties')">
+					Weekend Parties
+				</button>
+				<button class="tab-button" onclick="showEvent('quizzes')">
+					Pub Quizzes
+				</button>
+				<button class="tab-button" onclick="showEvent('games')">
+					Games (Loto & Scratch Tickets)
+				</button>
+			</div>
+
+			<!-- Content for each event category -->
+			<div class="event-content" id="parties">
+				<h2>Weekend Parties</h2>
+				<p>
+					Join us every weekend for an unforgettable party experience
+					with live DJs, themed nights, and drink specials!
+				</p>
+				<ul>
+					<li>Friday: Live DJ Set – House Music</li>
+					<li>Saturday: Retro Party – 80s & 90s Hits</li>
+					<li>Sunday: Chill Lounge – Acoustic Performances</li>
+				</ul>
+				<button>Book a table</button>
+				<div>
+					<img src="" alt="" />
+					<img src="" alt="" />
+				</div>
+			</div>
+
+			<div class="event-content" id="quizzes">
+				<h2>Pub Quizzes</h2>
+				<p>
+					Test your knowledge every Wednesday night at our famous pub
+					quiz! Gather your team and compete for great prizes.
+				</p>
+				<ul>
+					<li>7:00 PM: General Knowledge Quiz</li>
+					<li>9:00 PM: Themed Quiz (Movies, History, etc.)</li>
+				</ul>
+			</div>
+
+			<div class="event-content" id="games">
+				<h2>Games: Loto & Scratch Tickets</h2>
+				<p>
+					Feeling lucky? Try your hand at our Loto or scratch ticket
+					games. Great prizes and a fun way to relax with friends!
+				</p>
+				<ul>
+					<li>Daily Loto Draws at 6:00 PM</li>
+					<li>Scratch Tickets Available at the Bar</li>
+				</ul>
+			</div>
+		</section>
+
+		<aside id="location">
+			<h1>Directions to Caffe Bar Belvedere</h1>
+			<div id="map"></div>
+			<p>
+				Dolazak na adresu Velebitska 123, 21000 Split, pruža brojne
+				prednosti zahvaljujući odličnoj lokaciji. Smještena u mirnom
+				dijelu Splita, ova adresa nudi lak pristup svim važnim gradskim
+				sadržajima, uključujući trgovine, restorane i javni prijevoz. Uz
+				blizinu glavnih prometnica, idealna je za brze dolaske iz drugih
+				dijelova grada ili okolnih područja. Osim praktičnosti,
+				okruženje nudi ugodan boravak uz predivne poglede na grad i
+				obližnje planine, što doprinosi opuštenoj atmosferi idealnoj za
+				obavljanje poslovnih ili privatnih obveza.
+			</p>
+		</aside>
+
+		<section id="reviews-section">
+			<h1>What Our Customers Say</h1>
+			<div class="reviews-slider">
+				<!-- Review 1 -->
+				<div class="review">
+					<p>
+						"The weekend parties are amazing! Great music and vibes.
+						Highly recommend!"
+					</p>
+					<h3>– John Doe</h3>
+				</div>
+
+				<!-- Review 2 -->
+				<div class="review">
+					<p>
+						"We love the pub quizzes here. Fun atmosphere and good
+						prizes!"
+					</p>
+					<h3>– Jane Smith</h3>
+				</div>
+
+				<!-- Review 3 -->
+				<div class="review">
+					<p>
+						"Great place to hang out with friends and try your luck
+						with loto and scratch tickets!"
+					</p>
+					<h3>– Mark Johnson</h3>
+				</div>
+			</div>
+
+			<!-- Review Navigation Buttons -->
+			<button class="prev-btn">❮ Prev</button>
+			<button class="next-btn">Next ❯</button>
+
+			<!-- Leave a Review Section -->
+			<div id="leave-review">
+				<h2>Leave a Review</h2>
+				<form id="review-form">
+					<textarea
+						id="review-text"
+						rows="4"
+						placeholder="Write your review here..."
+					></textarea>
+					<input
+						type="text"
+						id="review-name"
+						placeholder="Your name"
+						required
+					/>
+					<button type="submit">Submit Review</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- Social Media Section -->
+		<section id="social-media-section">
+			<h1>Follow Us on Social Media</h1>
+			<div class="social-icons">
+				<a
+					href="https://www.facebook.com"
+					target="_blank"
+					class="social-icon"
+					aria-label="Facebook"
+				>
+					<img src="facebook-icon.png" alt="Facebook" />
+				</a>
+				<a
+					href="https://www.instagram.com"
+					target="_blank"
+					class="social-icon"
+					aria-label="Instagram"
+				>
+					<img src="instagram-icon.png" alt="Instagram" />
+				</a>
+				<a
+					href="https://www.twitter.com"
+					target="_blank"
+					class="social-icon"
+					aria-label="Twitter"
+				>
+					<img src="twitter-icon.png" alt="Twitter" />
+				</a>
+				<a
+					href="https://www.youtube.com"
+					target="_blank"
+					class="social-icon"
+					aria-label="YouTube"
+				>
+					<img src="youtube-icon.png" alt="YouTube" />
+				</a>
+			</div>
+		</section>
+
+		<footer>
+			<p>&copy; 2024 Caffe Bar Belvedere. All rights reserved.</p>
+		</footer>
+		<script defer src="script.js"></script>
+		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+	</body>
+</html>
