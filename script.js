@@ -16,6 +16,29 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+	const image = document.querySelector(".spinning-image");
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					image.classList.add("spinning"); // Start spinning and scaling
+					image.style.opacity = "1"; // Ensure it's visible when spinning
+				} else {
+					image.classList.remove("spinning"); // Stop spinning and scaling
+					image.style.opacity = "0"; // Hide when not visible
+				}
+			});
+		},
+		{
+			threshold: 0.5, // Trigger when 50% of the image is visible
+		}
+	);
+
+	observer.observe(image);
+});
+
 // Initialize the map and set its view to Caffe Bar Belvedere's coordinates
 var map = L.map("map").setView([43.5133855156846, 16.471894099491497], 14);
 

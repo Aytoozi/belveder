@@ -252,6 +252,7 @@ nav ul li a {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 	width: 80vw;
 	margin: auto;
 }
@@ -274,7 +275,40 @@ nav ul li a {
 	/* Inner shadow for depth */
 	display: block;
 	margin: 20px 4rem;
-	transform: rotateZ(6deg);}
+	transform: scale(0) rotate(0deg);
+	opacity: 0;
+	/* Initially hidden */
+	transition: opacity 0.5s ease;
+	/* Smooth transition for opacity */
+}
+
+.spinning {
+	animation: spinAndScale 1s linear forwards;
+	/* Apply spin animation */
+	opacity: 1;
+	/* Make visible when spinning */
+}
+
+@keyframes spinAndScale {
+	0% {
+		transform: scale(0) rotate(0deg);
+		/* Start from scale 0 and no rotation */
+		opacity: 0;
+		/* Hidden */
+	}
+
+	50% {
+		opacity: 1;
+		/* Make visible halfway through */
+	}
+
+	100% {
+		transform: scale(1) rotate(360deg) rotateZ(6deg);
+		/* End at full size and full rotation */
+		opacity: 1;
+		/* Ensure it stays visible */
+	}
+}
 
 #events-section {
 	text-align: center;
@@ -325,25 +359,44 @@ nav ul li a {
 	display: block;
 }
 
+#h1Location {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem auto;
+}
+
 #location {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	width: 60vw;
+	width: 90vw;
+	margin: auto;
 	height: 40vh;
+}
+
+#lineLocation {
+	width: 2px;
+	height: 93%;
+	margin: 4rem;
+	border-radius: 20%/30%;
+	background-color: rgb(73, 73, 73);
+	border: 2px solid rgb(73, 73, 73);
 }
 
 #location>p {
 	text-align: left;
 	width: 50%;
 	height: 100%;
-	padding: 1rem;
+	line-height: 2rem;
+	overflow-y: scroll;
 }
 
 #map {
-	height: 40vh;
+	height: 100%;
 	width: 50%;
+	box-shadow: 3px 3px 10px 1px rgb(73, 73, 73);
 }
 
 /* General styling for the reviews section */
