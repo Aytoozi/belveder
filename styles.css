@@ -511,6 +511,11 @@ nav ul li a {
 	padding: 20px;
 }
 
+
+.galleryImg{
+	height:30vh;
+}
+
 /* menu */
 #menuBody {
 	background: linear-gradient(180deg,
@@ -521,19 +526,35 @@ nav ul li a {
 			#eaded0 75%,
 			#f4ece1 75%,
 			#f4ece1 100%);
-	background-size: 50% 50%;
+	background-size: 100vh 100vh;
 }
 
-.gallery-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	gap: 10px;
+#galleryBody{
+	
+}
+main{
+position: relative;
+}
+.gallery-section{
+	position:relative;
+	display:flex;
+	flex-direction: column;
+	top:200px;
 }
 
-.gallery-grid img {
-	width: 100%;
-	border-radius: 10px;
+.gallery-grid{
+	display:flex;
+	flex-direction: row;
+	width:90vw;
+	flex-wrap: wrap;
+	position: relative;
 }
+.galleryImg{
+	height:25vh;
+	margin:0.4rem;
+}
+
+
 
 .contact-section form {
 	display: flex;
