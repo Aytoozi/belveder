@@ -180,7 +180,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding:1rem;
+	padding: 1rem;
 }
 
 #belvederLogo {
@@ -233,7 +233,7 @@ nav ul li a {
 
 .hero>h1 {
 	color: rgb(70, 130, 180);
-	background: radial-gradient(rgb(234, 178, 228), rgba(234, 178, 228, 0.7),rgb(70, 130, 180));
+	background: radial-gradient(rgb(234, 178, 228), rgba(234, 178, 228, 0.7), rgb(70, 130, 180));
 	border-radius: 15%/80%;
 	padding: 1rem;
 }
@@ -512,22 +512,86 @@ nav ul li a {
 
 /* menu */
 #menuBody {
+	/* background: linear-gradient(180deg,
+			rgb(70, 130, 180) 25%,
+			rgb(135, 206, 235) 25%,
+			rgb(135, 206, 235) 50%,
+			rgb(70, 130, 180) 50%,
+			rgb(70, 130, 180) 75%,
+			rgb(135, 206, 235) 75%,
+			rgb(135, 206, 235) 100%,
+			rgb(70, 130, 180) 100%); */
 	background: linear-gradient(180deg,
-			#eaded0 25%,
-			#f4ece1 25%,
-			#f4ece1 50%,
-			#eaded0 50%,
-			#eaded0 75%,
-			#f4ece1 75%,
-			#f4ece1 100%);
-	background-size: 100vh 100vh;
+			rgb(70, 130, 180) 0%,
+			rgb(135, 206, 235) 25%,
+			rgb(70, 130, 180) 50%,
+			rgb(135, 206, 235) 75%,
+			rgb(70, 130, 180) 100%);
+	background-size: 1500px 1500px;
+	margin: 0;
+	padding: 0;
+}
+
+#menuBody {
+	width: 100vw;
 }
 
 #menuMain {
+	color: white;
 	height: auto;
-	margin-top: 10rem;
-	width: 90%;
+	width: auto;
+	margin: 10rem auto;
+	padding: 0;
 }
+
+.menu-section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.drinks>ul,
+.amount>ul,
+.price>ul {
+	list-style-type: none;
+}
+
+.drinksType {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	margin: 2rem 0;
+	padding: 2rem;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 15px;
+	padding: 20px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: white;
+}
+
+.drinks {
+	width: 60%;
+}
+
+.amount {
+	width: 20%;
+	display: flex;
+	justify-content: end;
+}
+
+.price {
+	width: 20%;
+	display: flex;
+	justify-content: end;
+}
+
 
 .gallery-section {
 	height: auto;
@@ -551,11 +615,15 @@ nav ul li a {
 	margin: 0.4rem;
 }
 
+#bodyContact{
+	height:100vh;
+	margin:0px;
+	padding:0px;
+}
 #contactMain {
 	margin: auto;
 	padding: 0;
 	width: 90%;
-	height:94vh;
 }
 
 .contact-section {
