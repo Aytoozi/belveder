@@ -13,6 +13,12 @@
 			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Waterfall&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 	</head>
 	<body id="galleryBody">
 		<header id="header">
@@ -36,27 +42,218 @@
 			</section>
 		</header>
 		<main class="gallery-section">
-				<h1>Gallery</h1>
-				<div class="gallery-grid">
-					<img class="galleryImg" src="images/gallery/coffe/coffesmoke.jpg" alt="coffe beans" />
-					<img class="galleryImg" src="images/gallery/coffe/espresso.jpg" alt="espresso" />
-					<img class="galleryImg" src="images/gallery/coffe/coffeMIll.jpg" alt="coffe mill" />
-					<img class="galleryImg" src="images/gallery/coffe/coffeFlower.jpg" alt="coffe flower" />
-					<img class="galleryImg" src="images/gallery/coffe/coffeAndCookies.jpg" alt="another coffe call" />
-					<img class="galleryImg" src="images/gallery/coffe/fifthElementCoffe.jpg" alt="coffe fifth element" />
-					<img class="galleryImg" src="images/gallery/ambient/432389147_416016650949252_2925292698840546010_n.jpg" alt="ambient photo 1"/>
-					<img class="galleryImg" src="images/gallery/ambient/429775890_408533481697569_5114301686275162643_n.jpg" alt="ambient photo 2"/>
-					<img class="galleryImg" src="images/gallery/ambient/427997253_400524822498435_899153553687964516_n.jpg" alt="ambient photo 3"/>
-					<img class="galleryImg" src="images/gallery/ambient/424748181_17965004060691915_4537599077569434589_n.jpg" alt="ambient photo 4"/>
-					<img class="galleryImg" src="images/gallery/ambient/421037168_17963812301691915_9118670870664398486_n.jpg" alt="ambient photo 5"/>
-					<img class="galleryImg" src="images/gallery/ambient/409040759_408533478364236_3558805906339561602_n.jpg" alt="ambient photo 6"/>
-					<img class="galleryImg" src="images/gallery/bacvice.jpg" alt="split image 5" />
-					<img class="galleryImg" src="images/gallery/aplit4.jpg" alt="split image 4"/>
-					<img class="galleryImg" src="images/gallery/split11.jpg" alt="split image 3" />
-					<img class="galleryImg" src="images/gallery/split12.jpeg" alt="split image 2" />
-					<img class="galleryImg" src="images/gallery/split14.jpeg" alt="split image 1" />
-					<img class="galleryImg" src="images/gallery/Znjan.webp" alt="split image 0" />
-				</div>
+			<h1>Gallery</h1>
+			<div class="gallery-grid">
+				<a
+					href="images/gallery/coffe/coffesmoke.jpg"
+					data-fancybox="gallery"
+					data-caption="Coffee Beans"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/coffe/coffesmoke.jpg"
+						alt="Coffee beans"
+					/>
+				</a>
+				<a
+					href="images/gallery/coffe/espresso.jpg"
+					data-fancybox="gallery"
+					data-caption="Espresso"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/coffe/espresso.jpg"
+						alt="Espresso"
+					/>
+				</a>
+				<a
+					href="images/gallery/coffe/coffeMIll.jpg"
+					data-fancybox="gallery"
+					data-caption="Coffee Mill"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/coffe/coffeMIll.jpg"
+						alt="Coffee mill"
+					/>
+				</a>
+				<a
+					href="images/gallery/coffe/coffeFlower.jpg"
+					data-fancybox="gallery"
+					data-caption="Coffee Flower"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/coffe/coffeFlower.jpg"
+						alt="Coffee flower"
+					/>
+				</a>
+				<a
+					href="images/gallery/coffe/coffeAndCookies.jpg"
+					data-fancybox="gallery"
+					data-caption="Coffee and Cookies"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/coffe/coffeAndCookies.jpg"
+						alt="Coffee and cookies"
+					/>
+				</a>
+				<a
+					href="images/gallery/coffe/fifthElementCoffe.jpg"
+					data-fancybox="gallery"
+					data-caption="Coffee Fifth Element"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/coffe/fifthElementCoffe.jpg"
+						alt="Coffee fifth element"
+					/>
+				</a>
+				<a
+					href="images/gallery/coffe/coffeBeans.jpg"
+					data-fancybox="gallery"
+					data-caption="Coffee Fifth Element"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/coffe/coffeBeans.jpg"
+						alt="Coffee fifth element"
+					/>
+				</a>
+				<a
+					href="images/gallery/ambient/432389147_416016650949252_2925292698840546010_n.jpg"
+					data-fancybox="gallery"
+					data-caption="Ambient Photo 1"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/ambient/432389147_416016650949252_2925292698840546010_n.jpg"
+						alt="Ambient photo 1"
+					/>
+				</a>
+				<a
+					href="images/gallery/ambient/429775890_408533481697569_5114301686275162643_n.jpg"
+					data-fancybox="gallery"
+					data-caption="Ambient Photo 2"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/ambient/429775890_408533481697569_5114301686275162643_n.jpg"
+						alt="Ambient photo 2"
+					/>
+				</a>
+				<a
+					href="images/gallery/ambient/427997253_400524822498435_899153553687964516_n.jpg"
+					data-fancybox="gallery"
+					data-caption="Ambient Photo 3"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/ambient/427997253_400524822498435_899153553687964516_n.jpg"
+						alt="Ambient photo 3"
+					/>
+				</a>
+				<a
+					href="images/gallery/ambient/424748181_17965004060691915_4537599077569434589_n.jpg"
+					data-fancybox="gallery"
+					data-caption="Ambient Photo 4"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/ambient/424748181_17965004060691915_4537599077569434589_n.jpg"
+						alt="Ambient photo 4"
+					/>
+				</a>
+				<a
+					href="images/gallery/ambient/421037168_17963812301691915_9118670870664398486_n.jpg"
+					data-fancybox="gallery"
+					data-caption="Ambient Photo 5"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/ambient/421037168_17963812301691915_9118670870664398486_n.jpg"
+						alt="Ambient photo 5"
+					/>
+				</a>
+				<a
+					href="images/gallery/ambient/409040759_408533478364236_3558805906339561602_n.jpg"
+					data-fancybox="gallery"
+					data-caption="Ambient Photo 6"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/ambient/409040759_408533478364236_3558805906339561602_n.jpg"
+						alt="Ambient photo 6"
+					/>
+				</a>
+				<a
+					href="images/gallery/aplit4.jpg"
+					data-fancybox="gallery"
+					data-caption="Split Image 4"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/aplit4.jpg"
+						alt="Split image 4"
+					/>
+				</a>
+				<a
+					href="images/gallery/split11.jpg"
+					data-fancybox="gallery"
+					data-caption="Split Image 3"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/split11.jpg"
+						alt="Split image 3"
+					/>
+				</a>
+				<a
+					href="images/gallery/split12.jpeg"
+					data-fancybox="gallery"
+					data-caption="Split Image 2"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/split12.jpeg"
+						alt="Split image 2"
+					/>
+				</a>
+				<a
+					href="images/gallery/split14.jpeg"
+					data-fancybox="gallery"
+					data-caption="Split Image 1"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/split14.jpeg"
+						alt="Split image 1"
+					/>
+				</a>
+				<a
+					href="images/gallery/bacvice.jpg"
+					data-fancybox="gallery"
+					data-caption="Split Image 5"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/bacvice.jpg"
+						alt="Split image 5"
+					/>
+				</a>
+				<a
+					href="images/gallery/Znjan.webp"
+					data-fancybox="gallery"
+					data-caption="Split Image 0"
+				>
+					<img
+						class="galleryImg"
+						src="images/gallery/Znjan.webp"
+						alt="Split image 0"
+					/>
+				</a>
+			</div>
 		</main>
 		<footer>
 			<p>&copy; 2024 Caffe Bar Belvedere. All rights reserved.</p>
