@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
 /* General reset */
 html,
 * {
@@ -232,7 +235,7 @@ nav ul li a {
 }
 
 .hero>h1 {
-	color: rgb(70, 130, 180);
+	color: white;
 	background: radial-gradient(rgb(234, 178, 228), rgba(234, 178, 228, 0.7), rgb(70, 130, 180));
 	border-radius: 15%/80%;
 	padding: 1rem;
@@ -413,7 +416,7 @@ nav ul li a {
 }
 
 /* Reviews slider styling */
-.reviews-slider {
+/* .reviews-slider {
 	display: flex;
 	overflow: hidden;
 	width: 80%;
@@ -438,11 +441,11 @@ nav ul li a {
 .review h3 {
 	margin-top: 10px;
 	color: rgb(70, 130, 180);
-}
+} */
 
 
 /* Leave a Review section */
-#leave-review {
+/* #leave-review {
 	margin-top: 50px;
 	text-align: left;
 	width: 80%;
@@ -466,7 +469,7 @@ nav ul li a {
 	border-radius: 5px;
 	border: 1px solid #ccc;
 	width: 100%;
-}
+} */
 
 
 /* Social Media Section Styling */
@@ -474,7 +477,6 @@ nav ul li a {
 	text-align: center;
 	padding: 50px;
 	background-color: #fff;
-	margin-top: 50px;
 }
 
 #social-media-section h1 {
@@ -576,6 +578,7 @@ nav ul li a {
 .drinks {
 	width: 60%;
 }
+
 
 .amount {
 	width: 20%;
@@ -727,4 +730,231 @@ footer {
 	padding: 20px;
 	background-color: rgb(70, 130, 180);
 	color: white;
+}
+.line,
+.carousel,
+.carousel li,
+.carousel li img {
+	width: 100%;
+}
+
+.flex,
+.center,
+.carousel ul,
+.carousel-wrapper {
+	display: flex;
+}
+
+.center,
+.carousel ul {
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel-wrapper {
+	position: relative;
+	max-width: 1000px;
+}
+
+.carousel-wrapper input {
+	display: none;
+}
+
+.carousel {
+	overflow: hidden;
+	border-radius: 15px;
+	margin: 50px;
+}
+
+.carousel ul {
+	background-color: #f9f9f9;
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 500%;
+	transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.carousel ul li {
+	height: 8rem;
+}
+
+.carousel ul li p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 4rem;
+}
+
+.carousel ul li h3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 4rem;
+}
+
+.nav-dot {
+	position: absolute;
+	cursor: pointer;
+	margin-left: -7.5px;
+	bottom: -22.5px;
+	width: 15px;
+	height: 15px;
+	opacity: 0.5;
+	background-color: white;
+	border-radius: 50%;
+	transition: 0.4s;
+}
+
+.nav-dot:hover {
+	opacity: 0.8;
+	transform: scale(1.2);
+}
+
+.nav-dot:active {
+	transform: scale(0.9);
+}
+
+.nav-dot[for=slide1] {
+	left: 40%;
+}
+
+#slide1:checked~.carousel ul {
+	left: 0%;
+}
+
+#slide1:checked~.nav-dot[for=slide1] {
+	opacity: 1;
+}
+
+.nav-dot[for=slide2] {
+	left: 45%;
+}
+
+#slide2:checked~.carousel ul {
+	left: -100%;
+}
+
+#slide2:checked~.nav-dot[for=slide2] {
+	opacity: 1;
+}
+
+.nav-dot[for=slide3] {
+	left: 50%;
+}
+
+#slide3:checked~.carousel ul {
+	left: -200%;
+}
+
+#slide3:checked~.nav-dot[for=slide3] {
+	opacity: 1;
+}
+
+.nav-dot[for=slide4] {
+	left: 55%;
+}
+
+#slide4:checked~.carousel ul {
+	left: -300%;
+}
+
+#slide4:checked~.nav-dot[for=slide4] {
+	opacity: 1;
+}
+
+.nav-dot[for=slide5] {
+	left: 60%;
+}
+
+#slide5:checked~.carousel ul {
+	left: -400%;
+}
+
+#slide5:checked~.nav-dot[for=slide5] {
+	opacity: 1;
+}
+
+.left-arrow,
+.right-arrow {
+	display: none;
+	position: absolute;
+	cursor: pointer;
+	font-weight: bolder;
+	text-shadow: 0 0 7.5px rgba(0, 0, 0, .7);
+	top: 50%;
+	z-index: 1;
+	opacity: 0.7;
+	margin-top: -25px;
+	height: 50px;
+	font-size: 50px;
+	transition: 0.2s;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+	opacity: 1;
+	transform: scale(1.2);
+}
+
+.left-arrow:active,
+.right-arrow:active {
+	transform: scale(0.9);
+}
+
+.left-arrow {
+	left: 15px;
+}
+
+.right-arrow {
+	right: 15px;
+}
+
+#slide1:checked~.left-arrow[for=slide5],
+#slide1:checked~.right-arrow[for=slide2] {
+	display: block;
+}
+
+#slide2:checked~.left-arrow[for=slide1],
+#slide2:checked~.right-arrow[for=slide3] {
+	display: block;
+}
+
+#slide3:checked~.left-arrow[for=slide2],
+#slide3:checked~.right-arrow[for=slide4] {
+	display: block;
+}
+
+#slide4:checked~.left-arrow[for=slide3],
+#slide4:checked~.right-arrow[for=slide5] {
+	display: block;
+}
+
+#slide5:checked~.left-arrow[for=slide4],
+#slide5:checked~.right-arrow[for=slide1] {
+	display: block;
+}
+
+.signature {
+	margin-top: 100px;
+	bottom: 0;
+	font-family: "Quicksand";
+	color: rgba(150, 150, 170, );
+	text-shadow: 0 2.5px rgba(0, 0, 0, 0.25);
+}
+
+.signature .name {
+	color: white;
+}
+
+.signature .dot {
+	margin: 0 5px;
+}
+
+.signature a {
+	color: white;
+	text-decoration: underline;
 }

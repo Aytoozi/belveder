@@ -43,12 +43,12 @@
 		</header>
 		<main id="fontPageMain">
 			<div class="slideshow">
-				<img src="images/gallery/coffe/coffeArt.jpg" alt="Image 1" />
-				<img src="images/gallery/coffe/coffeOwl.jpg" alt="Image 2" />
+				<img src="images/gallery/people-celebrating-party.jpg" alt="Image 2" />
 				<img src="images/gallery/belvederBuilding.jpg" alt="Image 3" />
 				<img src="images/gallery/splitPanorama.jpg" alt="Image 4" />
+				<img src="images/gallery/coffe/coffeArt.jpg" alt="Image 1" />
 				<img
-					src="images/gallery/ambient/409040759_408533478364236_3558805906339561602_n.jpg"
+					src="images/gallery/group-happy-young-people-toasting-with-beer-having-fun-pub.jpg"
 					alt="Image 5"
 				/>
 			</div>
@@ -68,7 +68,8 @@
 			<div class="highlight-item">
 				<h2>Amazing beer</h2>
 				<p>
-					Cheers to good times with our craft beers, brewed to perfection for every palate!
+					Cheers to good times with our craft beers, brewed to
+					perfection for every palate!
 				</p>
 			</div>
 		</section>
@@ -97,7 +98,7 @@
 					Pub Quizzes
 				</button>
 				<button class="tab-button" onclick="showEvent('games')">
-					Games (Loto & Scratch Tickets)
+					Games (Tombola & Board Games)
 				</button>
 			</div>
 
@@ -109,9 +110,9 @@
 					with live DJs, themed nights, and drink specials!
 				</p>
 				<ul>
-					<li>Friday: Live DJ Set – House Music</li>
-					<li>Saturday: Retro Party – 80s & 90s Hits</li>
-					<li>Sunday: Chill Lounge – Acoustic Performances</li>
+					<li>DJ Set – House Music</li>
+					<li>Retro Party – 80s & 90s Hits</li>
+					<li>Chill Lounge – Acoustic Performances</li>
 				</ul>
 				<button>Book a table</button>
 				<div>
@@ -127,20 +128,20 @@
 					quiz! Gather your team and compete for great prizes.
 				</p>
 				<ul>
-					<li>7:00 PM: General Knowledge Quiz</li>
-					<li>9:00 PM: Themed Quiz (Movies, History, etc.)</li>
+					<li>General Knowledge Quiz</li>
+					<li>Themed Quiz (Movies, History, etc.)</li>
 				</ul>
 			</div>
 
 			<div class="event-content" id="games">
-				<h2>Games: Loto & Scratch Tickets</h2>
+				<h2>Games: Loto & Board Games</h2>
 				<p>
-					Feeling lucky? Try your hand at our Loto or scratch ticket
+					Feeling lucky? Try your hand at our Tombola or scratch ticket
 					games. Great prizes and a fun way to relax with friends!
 				</p>
 				<ul>
-					<li>Daily Loto Draws at 6:00 PM</li>
-					<li>Scratch Tickets Available at the Bar</li>
+					<li>Weekly Tombola Draws</li>
+					<li>Play Board Games at the Bar</li>
 				</ul>
 			</div>
 		</section>
@@ -164,41 +165,86 @@
 
 		<section id="reviews-section">
 			<h1>What Our Customers Say</h1>
-			<div class="reviews-slider">
-				<!-- Review 1 -->
-				<div class="review">
-					<p>
-						"The weekend parties are amazing! Great music and vibes.
-						Highly recommend!"
-					</p>
-					<h3>– John Doe</h3>
-				</div>
+			<div class="center">
+				<div class="carousel-wrapper">
+					<!-- abstract radio buttons for slides -->
+					<input
+						id="slide1"
+						type="radio"
+						name="controls"
+						checked="checked"
+					/>
+					<input id="slide2" type="radio" name="controls" />
+					<input id="slide3" type="radio" name="controls" />
+					<input id="slide4" type="radio" name="controls" />
+					<input id="slide5" type="radio" name="controls" />
 
-				<!-- Review 2 -->
-				<div class="review">
-					<p>
-						"We love the pub quizzes here. Fun atmosphere and good
-						prizes!"
-					</p>
-					<h3>– Jane Smith</h3>
-				</div>
+					<!-- navigation dots -->
+					<label for="slide1" class="nav-dot"></label>
+					<label for="slide2" class="nav-dot"></label>
+					<label for="slide3" class="nav-dot"></label>
+					<label for="slide4" class="nav-dot"></label>
+					<label for="slide5" class="nav-dot"></label>
 
-				<!-- Review 3 -->
-				<div class="review">
-					<p>
-						"Great place to hang out with friends and try your luck
-						with loto and scratch tickets!"
-					</p>
-					<h3>– Mark Johnson</h3>
+					<!-- arrows -->
+					<label for="slide1" class="left-arrow"> < </label>
+					<label for="slide2" class="left-arrow"> < </label>
+					<label for="slide3" class="left-arrow"> < </label>
+					<label for="slide4" class="left-arrow"> < </label>
+					<label for="slide5" class="left-arrow"> < </label>
+
+					<label for="slide1" class="right-arrow"> > </label>
+					<label for="slide2" class="right-arrow"> > </label>
+					<label for="slide3" class="right-arrow"> > </label>
+					<label for="slide4" class="right-arrow"> > </label>
+					<label for="slide5" class="right-arrow"> > </label>
+
+					<div class="carousel">
+						<ul>
+							<li>
+								<p>
+									"A perfect place for a relaxed coffee break.
+									Excellent espresso, laid-back vibe, and
+									friendly baristas!"
+								</p>
+								<h3>– Gabriel Mikulić</h3>
+							</li>
+							<li>
+								<p>
+									"Charming pub with a welcoming vibe and live
+									music on weekends; perfect for a hang out
+									with friends!"
+								</p>
+								<h3>– Lana Biloš</h3>
+							</li>
+							<li>
+								<p>
+									"Great place to hang out with friends and
+									try your luck with loto and scratch
+									tickets!"
+								</p>
+								<h3>– Mark Johnson</h3>
+							</li>
+							<li>
+								<p>
+									"We love the pub quizzes here. Fun
+									atmosphere and good prizes!"
+								</p>
+								<h3>– Jane Smith</h3>
+							</li>
+							<li>
+								<p>
+									"The weekend parties are amazing! Great
+									music and vibes. Highly recommend!"
+								</p>
+								<h3>– John Doe</h3>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-
-			<!-- Review Navigation Buttons -->
-			<button class="prev-btn">❮ Prev</button>
-			<button class="next-btn">Next ❯</button>
-
 			<!-- Leave a Review Section -->
-			<div id="leave-review">
+			<!-- <div id="leave-review">
 				<h2>Leave a Review</h2>
 				<form id="review-form">
 					<textarea
@@ -214,7 +260,7 @@
 					/>
 					<button type="submit">Submit Review</button>
 				</form>
-			</div>
+			</div> -->
 		</section>
 
 		<!-- Social Media Section -->

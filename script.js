@@ -84,65 +84,59 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // JavaScript for review slider
-let currentReviewIndex = 0;
-const reviews = document.querySelectorAll(".review");
-const totalReviews = reviews.length;
+// let currentReviewIndex = 0;
+// const reviews = document.querySelectorAll(".review");
+// const totalReviews = reviews.length;
+// const reviewContainer = document.querySelector(".reviews-slider");
 
-document.querySelector(".next-btn").addEventListener("click", () => {
-	changeReview(1);
-});
+// document.querySelector(".next-btn").addEventListener("click", () => {
+// 	changeReview(1);
+// });
 
-document.querySelector(".prev-btn").addEventListener("click", () => {
-	changeReview(-1);
-});
+// document.querySelector(".prev-btn").addEventListener("click", () => {
+// 	changeReview(-1);
+// });
 
-function changeReview(direction) {
-	// Hide the current review
-	reviews[currentReviewIndex].style.transform = `translateX(${
-		direction * 100
-	}%)`;
+// function changeReview(direction) {
+// 	currentReviewIndex =
+// 		(currentReviewIndex + direction + totalReviews) % totalReviews;
 
-	// Update the review index
-	currentReviewIndex =
-		(currentReviewIndex + direction + totalReviews) % totalReviews;
+// 	// Shift the entire container by 100% times the current index
+// 	reviewContainer.style.transform = `translateX(-${
+// 		currentReviewIndex * 100
+// 	}%)`;
+// }
 
-	// Show the next review
-	reviews[currentReviewIndex].style.transform = `translateX(0)`;
-}
+// document
+// 	.getElementById("review-form")
+// 	.addEventListener("submit", function (event) {
+// 		event.preventDefault();
 
-// Submit a new review
-document
-	.getElementById("review-form")
-	.addEventListener("submit", function (event) {
-		event.preventDefault();
+// 		// Get input values
+// 		const reviewText = document.getElementById("review-text").value;
+// 		const reviewName = document.getElementById("review-name").value;
 
-		// Get input values
-		const reviewText = document.getElementById("review-text").value;
-		const reviewName = document.getElementById("review-name").value;
+// 		// Validate input
+// 		if (reviewText === "" || reviewName === "") {
+// 			alert("Please complete both fields.");
+// 			return;
+// 		}
 
-		// Validate input
-		if (reviewText === "" || reviewName === "") {
-			alert("Please complete both fields.");
-			return;
-		}
+// 		// Create a new review element
+// 		const newReview = document.createElement("div");
+// 		newReview.classList.add("review");
+// 		newReview.innerHTML = `
+//         <p>"${reviewText}"</p>
+//         <h3>– ${reviewName}</h3>
+//     `;
 
-		// Create a new review element
-		const newReview = document.createElement("div");
-		newReview.classList.add("review");
-		newReview.innerHTML = `
-        <p>"${reviewText}"</p>
-        <h3>– ${reviewName}</h3>
-    `;
+// 		// Add new review to the slider
+// 		document.querySelector(".reviews-slider").appendChild(newReview);
 
-		// Add new review to the slider
-		document.querySelector(".reviews-slider").appendChild(newReview);
+// 		// Clear form
+// 		document.getElementById("review-text").value = "";
+// 		document.getElementById("review-name").value = "";
 
-		// Clear form
-		document.getElementById("review-text").value = "";
-		document.getElementById("review-name").value = "";
-
-		// Optional: show success message or update slider to show new review
-		alert("Thank you for your review!");
-	});
-
-
+// 		// Optional: show success message or update slider to show new review
+// 		alert("Thank you for your review!");
+// 	});
