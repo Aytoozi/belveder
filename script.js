@@ -16,6 +16,63 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+
+let translations = {};
+
+// Fetch translations from the external JSON file
+function loadTranslations() {
+	return fetch("/translations.json")
+		.then((response) => response.json())
+		.then((data) => {
+			translations = data; // Assign the fetched translations
+		})
+		.catch((error) => console.error("Error loading translations:", error));
+}
+
+function switchLanguage(language) {
+	// Store the selected language in localStorage
+	localStorage.setItem("selectedLanguage", language);
+
+	// Call the function to update the page content
+	updateLanguage(language);
+}
+
+// Function to update text based on selected language
+function updateLanguage(language) {
+	const elements = document.querySelectorAll("[data-translate]");
+
+	elements.forEach((element) => {
+		const translationKey = element.getAttribute("data-translate");
+		if (translations[language] && translations[language][translationKey]) {
+			element.innerText = translations[language][translationKey];
+		}
+	});
+}
+
+// Event listeners for language switcher buttons
+document.getElementById("en-button").addEventListener("click", () => {
+	switchLanguage("en");
+});
+
+document.getElementById("hr-button").addEventListener("click", () => {
+	switchLanguage("hr");
+});
+
+// On page load, fetch the translations and set the language based on localStorage
+document.addEventListener("DOMContentLoaded", () => {
+	loadTranslations().then(() => {
+		// Retrieve the language from localStorage (default to 'en' if not set)
+		const selectedLanguage =
+			localStorage.getItem("selectedLanguage") || "en";
+
+		// Apply the saved language to the page
+		updateLanguage(selectedLanguage);
+	});
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 	const image = document.querySelector(".spinning-image");
 

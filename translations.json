@@ -1,5 +1,7 @@
 {
 	"en": {
+		"eng": "EN",
+		"hrv": "CRO",
 		"nav_home": "Home",
 		"nav_menu": "Menu",
 		"nav_about": "About",
@@ -8,7 +10,7 @@
 		"Welcome_message": "Welcome to Caffe Bar Belvedere",
 		"explore_button": "Explore Our Menu",
 		"highlights": "Our Highlights",
-		"coffee_title": "Signature COffee",
+		"coffee_title": "Signature Coffee",
 		"coffee_description": "Experience our rich and aromatic coffee blends.",
 		"beer_title": "Amazing Beer",
 		"beer_description": "Cheers to good times with our craft beers, brewed to perfection for every palate!",
@@ -73,6 +75,7 @@
 		"contact_invitation": "If you have any questions or inquiries, feel free to reach out to us:",
 		"contact_button": "Contact",
 
+		"ourMenu": "Our menu",
 		"carbonatedDrinksHeading": "Carbonated drinks",
 		"nonCarboantedDrinksHeading": "Non-carbonated drinks",
 		"cappyNectarJuice": "Cappy nectar juice",
@@ -114,6 +117,8 @@
 		"cigarettesHeading": "Cigarettes"
 	},
 	"hr": {
+		"eng":"EN",
+		"hrv":"HR",
 		"nav_home": "Početna",
 		"nav_menu": "Jelovnik",
 		"nav_about": "O nama",
@@ -122,7 +127,7 @@
 		"Welcome_message": "Dobrodošli u Caffe Bar Belvedere",
 		"explore_button": "Istražite naš jelovnik",
 		"highlights": "Naši Najvažniji Trenuci",
-		"coffee_title": "Potpisna Kava",
+		"coffee_title": "Kremasta Kava",
 		"coffee_description": "Iskusite naše bogate i aromatične mješavine kave.",
 		"beer_title": "Nevjerojatno Pivo",
 		"beer_description": "Nazdravimo dobrim vremenima s našim zanatskim pivima, spravljenima do savršenstva za svačiji ukus!",
@@ -187,8 +192,9 @@
 		"contact_invitation": "Ako imate bilo kakva pitanja ili upite, slobodno nas kontaktirajte:",
 		"contact_button": "Kontaktirajte",
 
+		"ourMenu":"Naš menu",
 		"carbonatedDrinksHeading": "Gazirani napici",
-		"nonCarboantedDrinksHeading": "Negazirani napici",
+		"nonCarbonatedDrinksHeading": "Negazirani napici",
 		"cappyNectarJuice": "Cappy nektar sok",
 		"iceTea": "Ledeni čaj",
 		"freshOrangeJuice": "Svježi sok od naranče",
