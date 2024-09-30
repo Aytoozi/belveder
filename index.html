@@ -32,18 +32,41 @@
 				</div>
 				<nav id="navBar">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="menu.html">Menu</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li>
+							<a href="index.html" data-translate="nav_home"
+								>Home</a
+							>
+						</li>
+						<li>
+							<a href="menu.html" data-translate="nav_menu"
+								>Menu</a
+							>
+						</li>
+						<li>
+							<a href="about.html" data-translate="nav_about"
+								>About</a
+							>
+						</li>
+						<li>
+							<a href="gallery.html" data-translate="nav_gallery"
+								>Gallery</a
+							>
+						</li>
+						<li>
+							<a href="contact.html" data-translate="nav_contact"
+								>Contact</a
+							>
+						</li>
 					</ul>
 				</nav>
 			</section>
 		</header>
 		<main id="fontPageMain">
 			<div class="slideshow">
-				<img src="images/gallery/people-celebrating-party.jpg" alt="Image 2" />
+				<img
+					src="images/gallery/people-celebrating-party.jpg"
+					alt="Image 2"
+				/>
 				<img src="images/gallery/belvederBuilding.jpg" alt="Image 3" />
 				<img src="images/gallery/splitPanorama.jpg" alt="Image 4" />
 				<img src="images/gallery/coffe/coffeArt.jpg" alt="Image 1" />
@@ -53,21 +76,29 @@
 				/>
 			</div>
 			<section class="hero">
-				<h1>Welcome to Caffe Bar Belvedere</h1>
-				<button onclick="location.href='menu.html'">
+				<h1 data-translate="welcome_message">
+					Welcome to Caffe Bar Belvedere
+				</h1>
+				<button
+					data-translate="explore_button"
+					onclick="location.href='menu.html'"
+				>
 					Explore Our Menu
 				</button>
 			</section>
 		</main>
+
 		<section class="highlights">
-			<h1>Our Highlights</h1>
+			<h1 data-translate="highlights_title">Our Highlights</h1>
 			<div class="highlight-item">
-				<h2>Signature Coffee</h2>
-				<p>Experience our rich and aromatic coffee blends.</p>
+				<h2 data-translate="coffee_title">Signature Coffee</h2>
+				<p data-translate="coffee_description">
+					Experience our rich and aromatic coffee blends.
+				</p>
 			</div>
 			<div class="highlight-item">
-				<h2>Amazing beer</h2>
-				<p>
+				<h2 data-translate="beer_title">Amazing Beer</h2>
+				<p data-translate="beer_description">
 					Cheers to good times with our craft beers, brewed to
 					perfection for every palate!
 				</p>
@@ -76,8 +107,12 @@
 
 		<div id="saying">
 			<div>
-				<p>"I have measured out my life with coffee spoons."</p>
-				<p id="drugi">The Love Song of J. Alfred Prufrock; T.S.Eliot</p>
+				<p data-translate="quote_text">
+					"I have measured out my life with coffee spoons."
+				</p>
+				<p id="drugi" data-translate="quote_author">
+					The Love Song of J. Alfred Prufrock; T.S.Eliot
+				</p>
 			</div>
 			<img
 				class="spinning-image"
@@ -87,70 +122,98 @@
 		</div>
 
 		<section id="events-section">
-			<h1>What's Happening at Caffe Bar</h1>
+			<h1 data-translate="events_title">What's Happening at Caffe Bar</h1>
 
 			<!-- Tab buttons for switching between events -->
 			<div class="tabs">
-				<button class="tab-button" onclick="showEvent('parties')">
+				<button
+					class="tab-button"
+					data-translate="weekend_parties_button"
+					onclick="showEvent('parties', event)"
+					data-event="parties"
+				>
 					Weekend Parties
 				</button>
-				<button class="tab-button" onclick="showEvent('quizzes')">
+				<button
+					class="tab-button"
+					data-translate="pub_quizzes_button"
+					onclick="showEvent('quizzes', event)"
+					data-event="quizzes"
+				>
 					Pub Quizzes
 				</button>
-				<button class="tab-button" onclick="showEvent('games')">
+				<button
+					class="tab-button"
+					data-translate="games_button"
+					onclick="showEvent('games', event)"
+					data-event="games"
+				>
 					Games (Tombola & Board Games)
 				</button>
 			</div>
 
 			<!-- Content for each event category -->
 			<div class="event-content" id="parties">
-				<h2>Weekend Parties</h2>
-				<p>
+				<h2 data-translate="parties_title">Weekend Parties</h2>
+				<p data-translate="parties_description">
 					Join us every weekend for an unforgettable party experience
 					with live DJs, themed nights, and drink specials!
 				</p>
 				<ul>
-					<li>DJ Set – House Music</li>
-					<li>Retro Party – 80s & 90s Hits</li>
-					<li>Chill Lounge – Acoustic Performances</li>
+					<li data-translate="dj_set">DJ Set – House Music</li>
+					<li data-translate="retro_party">
+						Retro Party – 80s & 90s Hits
+					</li>
+					<li data-translate="chill_lounge">
+						Chill Lounge – Acoustic Performances
+					</li>
 				</ul>
-				<button>Book a table</button>
+				<button data-translate="book_table_button" onclick="window.location.href='contact.html'">Book a table</button>
 				<div>
 					<img src="" alt="" />
 					<img src="" alt="" />
 				</div>
 			</div>
 
-			<div class="event-content" id="quizzes">
-				<h2>Pub Quizzes</h2>
-				<p>
+			<div class="event-content" id="quizzes" style="display: none">
+				<h2 data-translate="quizzes_title">Pub Quizzes</h2>
+				<p data-translate="quizzes_description">
 					Test your knowledge every Wednesday night at our famous pub
 					quiz! Gather your team and compete for great prizes.
 				</p>
 				<ul>
-					<li>General Knowledge Quiz</li>
-					<li>Themed Quiz (Movies, History, etc.)</li>
+					<li data-translate="general_knowledge_quiz">
+						General Knowledge Quiz
+					</li>
+					<li data-translate="themed_quiz">
+						Themed Quiz (Movies, History, etc.)
+					</li>
 				</ul>
 			</div>
 
-			<div class="event-content" id="games">
-				<h2>Games: Loto & Board Games</h2>
-				<p>
-					Feeling lucky? Try your hand at our Tombola or scratch ticket
-					games. Great prizes and a fun way to relax with friends!
+			<div class="event-content" id="games" style="display: none">
+				<h2 data-translate="games_title">Games: Loto & Board Games</h2>
+				<p data-translate="games_description">
+					Feeling lucky? Try your hand at our Tombola or scratch
+					ticket games. Great prizes and a fun way to relax with
+					friends!
 				</p>
 				<ul>
-					<li>Weekly Tombola Draws</li>
-					<li>Play Board Games at the Bar</li>
+					<li data-translate="tombola_draws">Weekly Tombola Draws</li>
+					<li data-translate="board_games">
+						Play Board Games at the Bar
+					</li>
 				</ul>
 			</div>
 		</section>
 
-		<h1 id="h1Location">Directions to Caffe Bar Belvedere</h1>
+		<h1 id="h1Location" data-translate="directions_title">
+			Directions to Caffe Bar Belvedere
+		</h1>
 		<aside id="location">
 			<div id="map"></div>
 			<div id="lineLocation"></div>
-			<p>
+			<p data-translate="directions_description">
 				Dolazak na adresu Velebitska 123, 21000 Split, pruža brojne
 				prednosti zahvaljujući odličnoj lokaciji. Smještena u mirnom
 				dijelu Splita, ova adresa nudi lak pristup svim važnim gradskim
@@ -164,7 +227,7 @@
 		</aside>
 
 		<section id="reviews-section">
-			<h1>What Our Customers Say</h1>
+			<h1 data-translate="reviews_title">What Our Customers Say</h1>
 			<div class="center">
 				<div class="carousel-wrapper">
 					<!-- abstract radio buttons for slides -->
@@ -202,42 +265,53 @@
 					<div class="carousel">
 						<ul>
 							<li>
-								<p>
+								<p data-translate="review_1">
 									"A perfect place for a relaxed coffee break.
 									Excellent espresso, laid-back vibe, and
 									friendly baristas!"
 								</p>
-								<h3>– Gabriel Mikulić</h3>
+								<h3 data-translate="review_author_1">
+									– Gabriel Mikulić
+								</h3>
 							</li>
 							<li>
-								<p>
+								<p data-translate="review_2">
 									"Charming pub with a welcoming vibe and live
 									music on weekends; perfect for a hang out
 									with friends!"
 								</p>
-								<h3>– Lana Biloš</h3>
+								<h3 data-translate="review_author_2">
+									– Lana Biloš
+								</h3>
 							</li>
+
 							<li>
-								<p>
+								<p data-translate="review_3">
 									"Great place to hang out with friends and
 									try your luck with loto and scratch
 									tickets!"
 								</p>
-								<h3>– Mark Johnson</h3>
+								<h3 data-translate="review_author_3">
+									– Mark Johnson
+								</h3>
 							</li>
 							<li>
-								<p>
+								<p data-translate="review_4">
 									"We love the pub quizzes here. Fun
 									atmosphere and good prizes!"
 								</p>
-								<h3>– Jane Smith</h3>
+								<h3 data-translate="review_author_4">
+									– Jane Smith
+								</h3>
 							</li>
 							<li>
-								<p>
+								<p data-translate="review_5">
 									"The weekend parties are amazing! Great
 									music and vibes. Highly recommend!"
 								</p>
-								<h3>– John Doe</h3>
+								<h3 data-translate="review_author_5">
+									– John Doe
+								</h3>
 							</li>
 						</ul>
 					</div>
@@ -265,7 +339,7 @@
 
 		<!-- Social Media Section -->
 		<section id="social-media-section">
-			<h1>Follow Us on Social Media</h1>
+			<h1 data-translate="follow_us">Follow Us on Social Media</h1>
 			<div class="social-icons">
 				<a
 					href="https://www.facebook.com/belvedercaffebar/?_rdr"
@@ -298,7 +372,9 @@
 		</section>
 
 		<footer>
-			<p>&copy; 2024 Caffe Bar Belvedere. All rights reserved.</p>
+			<p data-translate="copyright">
+				© 2024 Caffe Bar Belvedere. All rights reserved.
+			</p>
 		</footer>
 		<script defer src="script.js"></script>
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>

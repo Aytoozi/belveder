@@ -26,34 +26,80 @@
 				</div>
 				<nav id="navBar">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="menu.html">Menu</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li>
+							<a href="index.html" data-translate="home">Home</a>
+						</li>
+						<li>
+							<a href="menu.html" data-translate="menu">Menu</a>
+						</li>
+						<li>
+							<a href="about.html" data-translate="about"
+								>About</a
+							>
+						</li>
+						<li>
+							<a href="gallery.html" data-translate="gallery"
+								>Gallery</a
+							>
+						</li>
+						<li>
+							<a href="contact.html" data-translate="contact"
+								>Contact</a
+							>
+						</li>
 					</ul>
 				</nav>
 			</section>
 		</header>
 		<main id="contactMain">
 			<section class="contact-section">
-				<h1>Contact Us</h1>
+				<h1 data-translate="contact_us">Contact Us</h1>
 				<form id="contact-form">
-					<input type="text" placeholder="Name" required />
-					<input type="email" placeholder="Email" required />
-					<textarea placeholder="Message" required></textarea>
-					<button type="submit">Send Message</button>
+					<input
+						type="text"
+						placeholder="Name"
+						required
+						data-translate="name_placeholder"
+					/>
+					<input
+						type="email"
+						placeholder="Email"
+						required
+						data-translate="email_placeholder"
+					/>
+					<textarea
+						placeholder="Message"
+						required
+						data-translate="message_placeholder"
+					></textarea>
+					<button type="submit" data-translate="send_message">
+						Send Message
+					</button>
 				</form>
 				<div class="contact-info">
-					<p>Address: Velebitska ul. 123, 21000 Split, Croatia</p>
-					<p>Phone: +385 ## ### ####</p>
-					<p>Email: contact@caffebarbelvedere.com</p>
+					<p data-translate="address">
+						Address: Velebitska ul. 123, 21000 Split, Croatia
+					</p>
+					<p data-translate="phone">Phone: +385 ## ### ####</p>
+					<p data-translate="email">
+						Email: contact@caffebarbelvedere.com
+					</p>
 				</div>
 			</section>
 		</main>
 		<div id="contactImgs">
-			<img id="batmanCall" src="/images/gallery/coffe/batmanCoffeCall.jpg" alt="batman coffe call">
-			<img id="phoneCall" src="/images/gallery/coffe/anotherCoffe.jpg" alt="another coffe">
+			<img
+				id="batmanCall"
+				src="/images/gallery/coffe/batmanCoffeCall.jpg"
+				alt="batman coffe call"
+				data-translate="batman_coffee_call"
+			/>
+			<img
+				id="phoneCall"
+				src="/images/gallery/coffe/anotherCoffe.jpg"
+				alt="another coffe"
+				data-translate="another_coffee"
+			/>
 		</div>
 		<footer>
 			<p>&copy; 2024 Caffe Bar Belvedere. All rights reserved.</p>
