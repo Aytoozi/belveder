@@ -4,18 +4,31 @@ document.addEventListener("DOMContentLoaded", function () {
 		var logo = document.getElementById("belvederLogo");
 		var navBar = document.getElementById("navBar");
 
-		if (window.scrollY > 50) {
-			navBar.style.visibility = "visible";
-			logo.style.width = "15vw";
-			navSection.style.backgroundColor = "rgb(70, 130, 180)";
+		// Check if the screen width is 768px or less
+		if (window.innerWidth <= 768) {
+			if (window.scrollY > 50) {
+				navBar.style.visibility = "visible";
+				logo.style.width = "35vw"; // Larger logo size for mobile when scrolling
+				navSection.style.backgroundColor = "rgb(70, 130, 180)";
+			} else {
+				navBar.style.visibility = "hidden";
+				logo.style.width = "40vw"; // Default larger size for mobile
+				navSection.style.backgroundColor = "transparent";
+			}
 		} else {
-			navBar.style.visibility = "hidden";
-			logo.style.width = "20vw";
-			navSection.style.backgroundColor = "transparent";
+			// For larger screens
+			if (window.scrollY > 50) {
+				navBar.style.visibility = "visible";
+				logo.style.width = "15vw";
+				navSection.style.backgroundColor = "rgb(70, 130, 180)";
+			} else {
+				navBar.style.visibility = "hidden";
+				logo.style.width = "20vw";
+				navSection.style.backgroundColor = "transparent";
+			}
 		}
 	});
 });
-
 
 let translations = {};
 
@@ -70,9 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
 	const image = document.querySelector(".spinning-image");
 
@@ -116,43 +126,42 @@ marker
 // Function to show the event content based on the selected tab
 // Function to show the event content based on the selected tab
 function showEvent(eventName, event) {
-    // Hide all event content
-    var contents = document.getElementsByClassName("event-content");
-    for (var i = 0; i < contents.length; i++) {
-        contents[i].style.display = "none"; // Hide each content div
-    }
+	// Hide all event content
+	var contents = document.getElementsByClassName("event-content");
+	for (var i = 0; i < contents.length; i++) {
+		contents[i].style.display = "none"; // Hide each content div
+	}
 
-    // Remove the active class from all tab buttons
-    var buttons = document.getElementsByClassName("tab-button");
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active-tab");
-    }
+	// Remove the active class from all tab buttons
+	var buttons = document.getElementsByClassName("tab-button");
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].classList.remove("active-tab");
+	}
 
-    // Show the selected event content
-    var selectedContent = document.getElementById(eventName);
-    if (selectedContent) {
-        selectedContent.style.display = "block"; // Show the selected content
-    }
+	// Show the selected event content
+	var selectedContent = document.getElementById(eventName);
+	if (selectedContent) {
+		selectedContent.style.display = "block"; // Show the selected content
+	}
 
-    // Add the active class to the selected button if event is defined
-    if (event) {
-        event.currentTarget.classList.add("active-tab");
-    }
+	// Add the active class to the selected button if event is defined
+	if (event) {
+		event.currentTarget.classList.add("active-tab");
+	}
 }
 
 // By default, show the "Weekend Parties" content
 document.addEventListener("DOMContentLoaded", function () {
-    showEvent("parties", null); // Pass null for the initial call
+	showEvent("parties", null); // Pass null for the initial call
 
-    // Add event listeners to buttons (optional if using inline onclick)
-    var buttons = document.getElementsByClassName("tab-button");
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener("click", function (event) {
-            showEvent(this.getAttribute("data-event"), event); // Pass the event
-        });
-    }
+	// Add event listeners to buttons (optional if using inline onclick)
+	var buttons = document.getElementsByClassName("tab-button");
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener("click", function (event) {
+			showEvent(this.getAttribute("data-event"), event); // Pass the event
+		});
+	}
 });
-
 
 // JavaScript for review slider
 // let currentReviewIndex = 0;

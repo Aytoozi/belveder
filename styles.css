@@ -234,7 +234,7 @@ nav ul li a {
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	padding:0.4rem;
+	padding: 0.4rem;
 	font-size: 1.5rem;
 }
 
@@ -985,4 +985,264 @@ footer {
 .signature a {
 	color: white;
 	text-decoration: underline;
+}
+
+@media (max-width:768px) {
+
+	/* Language Switcher */
+	.language-switcher {
+		position: relative;
+		/* Adjust positioning */
+		justify-content: center;
+		align-items: center;
+		right: 0;
+		top: 1vh;
+		margin: 0 1rem;
+		/* Reduce margin for mobile */
+	}
+
+	.language-switcher>button {
+		font-size: 1.2rem;
+		/* Reduce font size for mobile */
+		padding: 0.3rem;
+		/* Adjust padding */
+	}
+
+	#languageSeparator {
+		width: 2px;
+		height: 1.5rem;
+		/* Reduce size for separator */
+		margin: 2px;
+	}
+
+	#belvederLogo {
+		width: 50vw;
+		transition: width 0.3s ease-in-out;
+	}
+
+	#navBar {
+		display: flex;
+		/* Ensure it uses flex for layout */
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		visibility: hidden;
+		overflow: hidden;
+		/* Prevent content overflow */
+		transition: visibility 0.3s ease-in-out;
+		/* Animate opacity and height */
+	}
+
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 0;
+	}
+
+	.hero {
+		position: absolute;
+		top: 35%;
+		right: 50;
+		display: flex;
+		margin: 5vh;
+	}
+
+	#saying>img {
+		margin: 20px 0;
+	}
+
+	#h1Location {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 2rem auto;
+		flex-wrap: wrap;
+	}
+
+	#location {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		width: 90vw;
+		margin: auto;
+		height: 70vh;
+	}
+
+	#lineLocation {
+		width: 90%;
+		height: 1%;
+		margin: 4rem;
+		border-radius: 20%/30%;
+		background-color: rgb(70, 130, 180);
+		border: 2px solid rgb(70, 130, 180);
+	}
+
+	#location>p {
+		text-align: left;
+		width: 95%;
+		height: 100%;
+		line-height: 2rem;
+		overflow-y: auto;
+	}
+
+	#map {
+		height: 30vh;
+		width: 100%;
+		box-shadow: 3px 3px 10px 1px rgb(70, 130, 180);
+	}
+
+	.carousel-wrapper {
+		position: relative;
+		max-width: 100vw;
+	}
+
+	.carousel-wrapper input {
+		display: none;
+	}
+
+	.carousel {
+		overflow: hidden;
+		border-radius: 15px;
+		margin: 0 50px;
+	}
+
+	.carousel ul {
+		padding: 10px;
+	}
+
+	.gallery-section {
+		height: auto;
+		margin-top: 12rem;
+	}
+
+	#about-section {
+		text-align: center;
+		padding: 50px;
+		background-color: #fff;
+	}
+
+	#aboutBody {
+		height: 100vh;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#aboutMain {
+		margin: auto;
+		padding: 0;
+		margin-top: 10rem;
+		width: 90%;
+		height: auto;
+	}
+
+	#contactImgs {
+		display: flex;
+		flex-direction: row;
+		justify-content: end;
+		align-items: center;
+		width: 100vw;
+		height: 40vh;
+		margin-bottom: 0rem;
+		margin-top: 0rem;
+	}
+
+	#contactImgs>img {
+		box-shadow: 5px 5px 10px 5px rgb(43, 43, 43),
+			inset 10px 10px 10px 20px rgba(70, 130, 180, 0.7);
+		border: 6px solid rgba(70, 130, 180, 0.8);
+		margin: 1rem;
+		padding: 0.3rem;
+		border-radius: 40%/30%;
+	}
+
+	#phoneCall {
+		transform: rotateZ(15deg) translateX(-70px) translateY(-60px);
+		z-index: -1;
+		height: 40%;
+	}
+
+	#batmanCall {
+		height: 60%;
+		transform: rotateZ(-5deg);
+	}
+
+	#contactMain {
+		margin-top: 12rem;
+	}
+
+	#menuMain {
+		color: white;
+		height: auto;
+		width: auto;
+		margin: 12rem auto;
+		padding: 0;
+	}
+
+	.menu-section {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.drinks>ul,
+	.amount>ul,
+	.price>ul {
+		list-style-type: none;
+	}
+
+	.drinksType {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin: 2rem 0;
+		padding: 2rem;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 15px;
+		padding: 20px;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: white;
+	}
+
+	.drinks {
+		width: 60%;
+	}
+
+	.amount {
+		width: 20%;
+		display: flex;
+		justify-content: end;
+	}
+
+	.price {
+		width: 20%;
+		display: flex;
+		justify-content: end;
+	}
+	.oneline{
+		margin-bottom: 1rem;
+	}
+	.twoline {
+		margin-bottom: 1.2rem;
+	}
+	.fourline{
+		margin-bottom: 3.5rem;
+	}
+	.vode{
+		display:flex;
+		align-items:first baseline;
+		height:180px;
+	}
 }
