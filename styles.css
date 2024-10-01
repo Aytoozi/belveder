@@ -1230,6 +1230,9 @@ footer {
 		display: flex;
 		justify-content: end;
 	}
+	.price{
+		margin-bottom: 0.2rem;
+	}
 	.oneline{
 		margin-bottom: 1rem;
 	}
@@ -1237,12 +1240,12 @@ footer {
 		margin-bottom: 1.2rem;
 	}
 	.fourline{
-		margin-bottom: 3.5rem;
+		margin-bottom:4.9rem;
 	}
 	.vode{
 		display:flex;
 		align-items:first baseline;
-		height:180px;
+		height:170px;
 		margin-top:10px;
 	}
 }
