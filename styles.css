@@ -1243,5 +1243,6 @@ footer {
 		display:flex;
 		align-items:first baseline;
 		height:180px;
+		margin-top:10px;
 	}
 }
