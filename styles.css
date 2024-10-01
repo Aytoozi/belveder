@@ -1191,9 +1191,6 @@ footer {
 		justify-content: center;
 		align-items: center;
 	}
-*{
-	border: 1px solid black;
-}
 	.drinks>ul,
 	.amount>ul,
 	.price>ul {
