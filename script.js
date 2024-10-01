@@ -34,7 +34,7 @@ let translations = {};
 
 // Fetch translations from the external JSON file
 function loadTranslations() {
-	return fetch("/translations.json")
+	return fetch("translations.json")
 		.then((response) => response.json())
 		.then((data) => {
 			translations = data; // Assign the fetched translations
