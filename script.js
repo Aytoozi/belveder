@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				navSection.style.backgroundColor = "rgb(70, 130, 180)";
 			} else {
 				navBar.style.visibility = "hidden";
-				logo.style.width = "40vw"; // Default larger size for mobile
+				logo.style.width = "60vw"; // Default larger size for mobile
 				navSection.style.backgroundColor = "transparent";
 			}
 		} else {
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	loadTranslations().then(() => {
 		// Retrieve the language from localStorage (default to 'en' if not set)
 		const selectedLanguage =
-			localStorage.getItem("selectedLanguage") || "en";
+			localStorage.getItem("selectedLanguage") || "hr";
 
 		// Apply the saved language to the page
 		updateLanguage(selectedLanguage);
@@ -86,43 +86,55 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
 	const image = document.querySelector(".spinning-image");
 
-	const observer = new IntersectionObserver(
-		(entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					image.classList.add("spinning"); // Start spinning and scaling
-					image.style.opacity = "1"; // Ensure it's visible when spinning
-				} else {
-					image.classList.remove("spinning"); // Stop spinning and scaling
-					image.style.opacity = "0"; // Hide when not visible
-				}
-			});
-		},
-		{
-			threshold: 0.5, // Trigger when 50% of the image is visible
-		}
-	);
+	if (image) {
+		// Check if the element exists
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						image.classList.add("spinning"); // Start spinning and scaling
+						image.style.opacity = "1"; // Ensure it's visible when spinning
+					} else {
+						image.classList.remove("spinning"); // Stop spinning and scaling
+						image.style.opacity = "0"; // Hide when not visible
+					}
+				});
+			},
+			{
+				threshold: 0.5, // Trigger when 50% of the image is visible
+			}
+		);
 
-	observer.observe(image);
+		observer.observe(image);
+	} else {
+		console.warn("Element with class 'spinning-image' not found.");
+	}
 });
 
+
 // Initialize the map and set its view to Caffe Bar Belvedere's coordinates
-var map = L.map("map").setView([43.5133855156846, 16.471894099491497], 14);
+// Initialize the map and set its view only if the map container exists
+document.addEventListener("DOMContentLoaded", function () {
+    const mapContainer = document.getElementById("map");
 
-// Add OpenStreetMap tiles (free and open-source)
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-	maxZoom: 18,
-}).addTo(map);
+    if (mapContainer) { // Check if the map container exists
+        var map = L.map(mapContainer).setView([43.5133855156846, 16.471894099491497], 14);
 
-// Add a marker (pin) for Caffe Bar Belvedere
-var marker = L.marker([43.5133855156846, 16.471894099491497]).addTo(map);
+        // Add OpenStreetMap tiles
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 18,
+        }).addTo(map);
 
-// Add a popup to the marker
-marker
-	.bindPopup(
-		"<b>Caffe Bar Belvedere</b><br>Velebitska ul. 123<br> 21000 Split, Croatia"
-	)
-	.openPopup();
+        // Add a marker for Caffe Bar Belvedere
+        var marker = L.marker([43.5133855156846, 16.471894099491497]).addTo(map);
+
+        // Add a popup to the marker
+        marker.bindPopup(
+            "<b>Caffe Bar Belvedere</b><br>Velebitska ul. 123<br> 21000 Split, Croatia"
+        ).openPopup();
+    }
+});
+
 // Function to show the event content based on the selected tab
 // Function to show the event content based on the selected tab
 function showEvent(eventName, event) {
