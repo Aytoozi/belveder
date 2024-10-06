@@ -60,23 +60,36 @@
 		<main id="contactMain">
 			<section class="contact-section">
 				<h1 data-translate="contact_us">Contact Us</h1>
-				<form id="contact-form">
+				<form
+					id="contact-form"
+					action="https://formsubmit.co/sunset.food.st@gmail.com"
+					method="POST"
+				>
+					<input
+						type="hidden"
+						name="_subject"
+						value="New submission!"
+					/>
 					<input
 						type="text"
 						placeholder="Name"
 						required
 						data-translate="name_placeholder"
+						name="name"
 					/>
 					<input
 						type="email"
 						placeholder="Email"
 						required
 						data-translate="email_placeholder"
+						name="email"
 					/>
 					<textarea
 						placeholder="Message"
 						required
 						data-translate="message_placeholder"
+						name="message"
+						id="textareaContat"
 					></textarea>
 					<button type="submit" data-translate="send_message">
 						Send Message
@@ -86,7 +99,7 @@
 					<p data-translate="address">
 						Address: Velebitska ul. 123, 21000 Split, Croatia
 					</p>
-					<p data-translate="phone">Phone: +385 ## ### ####</p>
+					<p data-translate="phone">Phone: +385 91 576 2590</p>
 					<p data-translate="email">
 						Email: contact@caffebarbelveder.com
 					</p>
