@@ -232,3 +232,41 @@ document.addEventListener("DOMContentLoaded", function () {
 // 		// Optional: show success message or update slider to show new review
 // 		alert("Thank you for your review!");
 // 	});
+// Function to set a cookie
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Cookie expires after 'days'
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Function to get a cookie value by name
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i].trim();
+    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// Show cookie banner if consent is not given
+document.addEventListener('DOMContentLoaded', () => {
+  if (!getCookie('cookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+
+  // Handle the 'Accept' button click
+  document.getElementById('accept-cookies').addEventListener('click', () => {
+    setCookie('cookieConsent', 'true', 365);  // Consent lasts for 365 days
+    document.getElementById('cookie-banner').style.display = 'none';
+  });
+
+  // Handle the 'Decline' button click
+  document.getElementById('decline-cookies').addEventListener('click', () => {
+    // Optionally, you can choose to set a cookie indicating the decline
+    setCookie('cookieConsent', 'false', 365); // Cookie to remember the decline (optional)
+    document.getElementById('cookie-banner').style.display = 'none';
+  });
+});

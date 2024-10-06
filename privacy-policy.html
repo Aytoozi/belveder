@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title data-translate="privacy_policy_title">Privacy Policy</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Waterfall&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				margin: 1rem;
+				padding: 1rem;
+				color: rgb(70, 130, 180);
+				font-family: "Lato", sans-serif;
+				font-weight: 400;
+				font-style: normal;
+				font-size: 1rem;
+			}
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-family: "Waterfall", cursive;
+				font-weight: 900;
+				font-style: normal;
+			}
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				font-size: 2rem;
+			}
+			.buttonP {
+				padding: 10px 20px;
+				margin: 5px;
+				width: 100%;
+				border: none;
+				background-color: rgb(70, 130, 180);
+				color: #fff;
+				cursor: pointer;
+				border-radius: 5px;
+				transition: background-color 0.3s ease;
+                text-decoration: none;
+			}
+			.buttonPP {
+				margin: 30px 0;
+			}
+			body button {
+				padding: 10px 20px;
+				margin: 5px;
+				border: none;
+				background-color: rgb(70, 130, 180);
+				color: #fff;
+				cursor: pointer;
+				border-radius: 5px;
+				transition: background-color 0.3s ease;
+			}
+
+			button:hover {
+				background-color: rgb(135, 206, 235);
+			}
+			.language-switcher {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 3rem;
+				position: absolute;
+				right: 10px;
+				top: 6.6vh;
+			}
+
+			.language-switcher > button {
+				font-family: "Lato", sans-serif;
+				font-weight: 400;
+				font-style: normal;
+				padding: 0.4rem;
+				font-size: 1.5rem;
+			}
+
+			#languageSeparator {
+				width: 4px;
+				height: 2.2rem;
+				background-color: white;
+				color: white;
+				margin: 5px;
+				border-radius: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="language-switcher">
+			<button id="en-button" data-translate="eng">EN</button>
+			<div id="languageSeparator"></div>
+			<button id="hr-button" data-translate="hrv">CRO</button>
+		</div>
+		<h1 data-translate="privacy_policy_header">Privacy Policy</h1>
+		<p data-translate="privacy_policy_intro">
+			We value your privacy and are committed to protecting your personal
+			information. This privacy policy outlines how we collect, use, and
+			protect your data when you visit our website.
+		</p>
+		<h2 data-translate="data_we_collect_header">Data We Collect</h2>
+		<ul>
+			<li data-translate="personal_info">
+				Personal identification information (name, email, etc.)
+			</li>
+			<li data-translate="usage_data">
+				Usage data (pages visited, time spent on site)
+			</li>
+			<li data-translate="cookie_data">
+				Cookie data (to enhance user experience)
+			</li>
+		</ul>
+		<h2 data-translate="how_we_use_data_header">How We Use Your Data</h2>
+		<p data-translate="how_we_use_data_description">
+			We use your data to improve the performance of our website,
+			personalize content, and ensure a smooth user experience. We may
+			also use analytics data to understand how users interact with our
+			site.
+		</p>
+		<h2 data-translate="how_to_control_data_header">
+			How to Control Your Data
+		</h2>
+		<p data-translate="control_data_description">
+			You can control your cookie preferences in your browser settings or
+			by using our cookie consent tool. You may also contact us to request
+			deletion or modification of your personal data.
+		</p>
+		<p class="buttonPP">
+			<a
+				class="buttonP"
+				href="cookie-policy.html"
+				data-translate="go_to_cookie_policy"
+				>Go to Cookie Policy</a
+			>
+		</p>
+		<p>
+			<a
+				class="buttonP"
+				href="index.html"
+				data-translate="go_to_home_page_privacy"
+				>Go to Home Page</a
+			>
+		</p>
+		<script src="script.js"></script>
+	</body>
+</html>

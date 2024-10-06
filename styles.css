@@ -287,6 +287,18 @@ nav ul li a {
 	margin: 20px 0;
 }
 
+#cookie-banner {
+	display: none;
+	background: #f2f2f2;
+	padding: 15px;
+	position: fixed;
+	bottom: 2rem;
+	left: 2rem;
+	border-radius: 5px;
+	width: 40%;
+	text-align: center;
+}
+
 #saying {
 	display: flex;
 	flex-direction: row;
@@ -993,11 +1005,11 @@ footer {
 	text-decoration: underline;
 }
 
-#textareaContat{
-	resize:none;
+#textareaContat {
+	resize: none;
 }
-#textareaContat::placeholder{
-	color:#757575;
+#textareaContat::placeholder {
+	color: #757575;
 }
 
 @media (max-width: 768px) {
